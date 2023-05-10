@@ -5,10 +5,10 @@ j = 0
 while (i < 10):
 
     if i == 9 and j == 9:
-        print(f"{i}{j}")
+        print("{}{}".format(i, j))
         break
     else:
-        print(f"{i}{j}, ", end='')
+        print("{}{}".format(i, j), end=', ')
 
     j += 1
     if j != 10:
