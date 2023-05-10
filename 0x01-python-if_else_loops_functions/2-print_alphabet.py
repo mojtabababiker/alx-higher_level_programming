@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for i in range(97, 123):
-    print("%c" %i, end='')
+i = 97
+while (i <= 122):
+    print("%c" % i, end='')
+    i += 1

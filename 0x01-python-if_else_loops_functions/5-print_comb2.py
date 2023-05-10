@@ -4,7 +4,7 @@ j = 0
 
 while (i < 10):
 
-    if  i == 9 and j == 9:
+    if i == 9 and j == 9:
         print(f"{i}{j}")
         break
     else:
