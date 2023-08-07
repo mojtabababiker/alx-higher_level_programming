@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 98.032
-print(f"{int(number)} Battery street")
+number = 2.008
+print(f'{int(number)!r} Battery street')
