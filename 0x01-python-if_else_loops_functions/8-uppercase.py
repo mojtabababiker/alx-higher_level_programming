@@ -13,12 +13,3 @@ def uppercase(st):
         print("{}".format(printed_char), end='')
         char += 1
     print("".format())
-
-
-"""
-if __name__ == "__main__":
-    uppercase("yes its capital")
-    uppercase("")
-    uppercase("yes123is_multi-character")
-    uppercase("DFG")
-"""
