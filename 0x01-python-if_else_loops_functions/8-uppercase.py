@@ -12,7 +12,7 @@ def uppercase(st):
             printed_char = st[char]
         print("{}".format(printed_char), end='')
         char += 1
-    print()
+    print("".format())
 
 
 """
