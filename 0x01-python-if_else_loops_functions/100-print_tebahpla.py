@@ -22,4 +22,4 @@ for i in range(122, 96, -1):
     else:
         char = i
         upper_case = 1
-    print(f"{format(char, 'c')}", end="")
+    print("{}".format(format(char, 'c')), end="")
