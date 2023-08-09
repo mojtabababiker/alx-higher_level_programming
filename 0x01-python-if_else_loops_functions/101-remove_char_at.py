@@ -17,10 +17,9 @@ def remove_char_at(s, n):
     """
     i = 0
     new_str = str()
-    if len(s) == 0:
-        return None
+
     while i < len(s):
-        if i == n or i == len(s) + n:
+        if i == n:
             i += 1
             continue
         new_str += s[i]
