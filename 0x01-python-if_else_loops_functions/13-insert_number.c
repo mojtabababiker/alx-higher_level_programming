@@ -40,7 +40,7 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		slow_node = temp;
 		fast_node = slow_node->next;
-		if (fast_node->n > number)
+		if (fast_node == NULL || fast_node->n > number)
 		{
 			/* inser the new node before this node */
 			new_node->next = fast_node;
