@@ -29,25 +29,27 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	/*searching for the node that have a number larger than the new node n*/
 	temp = *head;
-	if (temp->n > number)
+	if (((*head)->n) > number)
 	{
-		new_node->next = temp;
+		new_node->next = *head;
 		*head = new_node;
 		return (new_node);
 	}
 	/* using the two pointer approch */
-	while (temp != NULL)
+	while (*head != NULL)
 	{
-		slow_node = temp;
+		slow_node = *head;
 		fast_node = slow_node->next;
 		if (fast_node == NULL || fast_node->n > number)
 		{
 			/* inser the new node before this node */
 			new_node->next = fast_node;
 			slow_node->next = new_node;
+			*head = temp;
 			return (new_node);
 		}
-		temp++;
+		*head = (*head)->next;
 	}
+	*head = temp;
 	return (NULL);
 }
