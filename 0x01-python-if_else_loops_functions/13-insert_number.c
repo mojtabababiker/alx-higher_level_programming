@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdlib.h>
+
 /**
  * insert_node - insert a new node in a sorted linked_list depinding
  * @head: pointer to the first node on the sorted linked_list
@@ -27,7 +29,7 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	/*searching for the node that have a number larger than the new node n*/
 	temp = *head;
-	if (temp->n > mumber)
+	if (temp->n > number)
 	{
 		new_node->next = temp;
 		*head = new_node;
@@ -37,7 +39,7 @@ listint_t *insert_node(listint_t **head, int number)
 	while (temp != NULL)
 	{
 		slow_node = temp;
-		fast_node = slow->next;
+		fast_node = slow_node->next;
 		if (fast_node->n > number)
 		{
 			/* inser the new node before this node */
