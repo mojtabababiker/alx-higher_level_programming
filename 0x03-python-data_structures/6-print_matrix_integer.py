@@ -11,5 +11,5 @@ def print_matrix_integer(matrix=[[]]):
             end = ' '
             if col == len(matrix[row]) - 1:
                 end = ''
-            print(matrix[row][col], end=end)
+            print("{:d}".format(matrix[row][col]), end=end)
         print()
