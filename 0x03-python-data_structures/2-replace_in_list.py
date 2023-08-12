@@ -16,9 +16,3 @@ def replace_in_list(my_list, idx, element):
         return (my_list)
     my_list[idx] = element
     return (my_list)
-
-
-my_list = [1, 2, 3, 4, 5]
-lis = replace_in_list(my_list, 2, 9)
-print(my_list)
-print(lis)
