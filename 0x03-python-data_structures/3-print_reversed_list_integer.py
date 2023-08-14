@@ -6,9 +6,9 @@ def print_reversed_list_integer(my_list=[]):
         Args:
             my_list - list of number that will be printed from
     '''
-    i = -1
-    for num in my_list:
+    i = 0
+    length = len(my_list)
+
+    while i < length:
+        print("{:d}".format(my_list[length - i - 1]))
         i += 1
-    while i >= 0:
-        print("{:d}".format(my_list[i]))
-        i -= 1
