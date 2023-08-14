@@ -7,6 +7,8 @@ def print_reversed_list_integer(my_list=[]):
             my_list - list of number that will be printed from
     '''
     i = 0
+    if my_list is None:
+        return
     length = len(my_list)
 
     while i < length:
