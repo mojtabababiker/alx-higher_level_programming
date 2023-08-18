@@ -30,13 +30,11 @@ def roman_to_int(r_string: str) -> int:
     while i < len(r_string):
         if i < len(r_string) - 1:
             if r_values[r_string[i]] >= r_values[r_string[i + 1]]:
-                int_value += (r_values[r_string[i + 1]]
-                              + r_values[r_string[i]])
-                i += 2
+                int_value += r_values[r_string[i]]
+                i += 1
                 continue
             else:
-                int_value += (r_values[r_string[i + 1]]
-                              - r_values[r_string[i]])
+                int_value += r_values[r_string[i + 1]] - r_values[r_string[i]]
                 i += 2
                 continue
         else:
