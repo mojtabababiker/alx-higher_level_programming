@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 def roman_to_int(r_string: str) -> int:
     '''
-    convert a string of roman numerals into the equivalent integer
-    value
+    convert a string of roman numerals into the equivalent
+    integer value
 
     Args:
         r_string - a stirng consists of roman numerals, eg:
         "LXXXVII"
 
     Return:
-        the equivalent integer value for the roman numerals, eg:
-        87
+        the equivalent integer value for the roman numerals,
+        eg: 87
     '''
     r_values = {
         'I': 1,
@@ -26,8 +26,9 @@ def roman_to_int(r_string: str) -> int:
 
     if r_string is None:
         return (0)
-    if not (type(r_string) is type(str())):
+    if not isinstance(r_string, str):
         return (0)
+
     while i < len(r_string):
         if i < len(r_string) - 1:
             if r_values[r_string[i]] >= r_values[r_string[i + 1]]:
