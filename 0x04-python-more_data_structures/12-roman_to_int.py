@@ -24,9 +24,10 @@ def roman_to_int(r_string: str) -> int:
     int_value = 0
     i = 0
 
-    if (r_string is None) or (not (type(r_string) is type("string"))):
-        return 0
-
+    if r_string is None:
+        return (0)
+    if not (type(r_string) is type(str())):
+        return (0)
     while i < len(r_string):
         if i < len(r_string) - 1:
             if r_values[r_string[i]] >= r_values[r_string[i + 1]]:
