@@ -19,7 +19,11 @@ class Node:
         '''
         Conistructer method
         '''
+        if not isinstance(data, int):
+            raise TypeError("data must be an integer")
         self.__data = data
+        if next_node is not None and not isinstance(next_node, Node):
+            raise TypeError("next_node must be a Node object")
         self.__next_node = next_node
 
     @property
@@ -90,7 +94,11 @@ class SinglyLinkedList:
         Args:
             value: the value of the new node
         '''
-        __new_node = Node(value)
+        try:
+            __new_node = Node(value)
+        except TypeError as er:
+            print(er)
+            exit(0)
         __temp = self.__head
         __prev = None
         if self.__head is None:
@@ -116,19 +124,3 @@ class SinglyLinkedList:
         __new_node.next_node = None
         __prev.next_node = __new_node
         self.__head = __temp
-
-
-if __name__ == "__main__":
-    sll = SinglyLinkedList()
-    sll.sorted_insert(2)
-    sll.sorted_insert(5)
-    sll.sorted_insert(3)
-    sll.sorted_insert(10)
-    sll.sorted_insert(1)
-    sll.sorted_insert(-4)
-    sll.sorted_insert(-3)
-    sll.sorted_insert(4)
-    sll.sorted_insert(5)
-    sll.sorted_insert(12)
-    sll.sorted_insert(3)
-    print(sll)
