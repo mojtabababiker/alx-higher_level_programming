@@ -11,6 +11,9 @@ class Square:
     '''
 
     def __init__(self, size=0):
+        '''
+        conistrocter method
+        '''
         self.__set_size(size)
 
     def __set_size(self, size):
