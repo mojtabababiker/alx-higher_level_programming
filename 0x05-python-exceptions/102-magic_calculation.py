@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def magic_calculation(a, b):
     result = 0
-    while i in range(1, 3):
+    for i in range(1, 3):
         try:
             if i > a:
                 raise Exception('Too far')
@@ -11,7 +11,3 @@ def magic_calculation(a, b):
             result = b + a
             break
     return result
-
-
-import dis
-print(dis.dis(magic_calculation))
