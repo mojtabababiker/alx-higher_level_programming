@@ -14,7 +14,12 @@ class Square:
         '''
         conistrocter method
         '''
-        self.__set_size(size)
+        try:
+            if size < 0:
+                raise ValueError("size must be >= 0")
+        except TypeError:
+            raise TypeError("size must be an integer")
+        self.__size = size
 
     def __set_size(self, size):
         '''
