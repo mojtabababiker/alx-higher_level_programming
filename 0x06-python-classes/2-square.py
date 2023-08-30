@@ -12,22 +12,7 @@ class Square:
 
     def __init__(self, size=0):
         '''
-        conistrocter method
-        '''
-        try:
-            if size < 0:
-                raise ValueError("size must be >= 0")
-        except TypeError:
-            raise TypeError("size must be an integer")
-        self.__size = size
-
-    def __set_size(self, size):
-        '''
-        Square.set_size(self, size):
-
-        Args:
-            self: placeholder for the object
-            size: the square size
+        constructer method
         '''
         try:
             if size < 0:
