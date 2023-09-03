@@ -1,0 +1,68 @@
+"""
+=============================
+ This is a test suit for the
+  2-matrix_divided.py  task
+=============================
+
+>>> from matrix_divided import matrix_divided
+
+    /matrix_divided takes a list of lists that have the same length
+         divides each elements on this list by the div arg/
+
+]normal test case(ins, 4)
+>>> matrix1 = [[14, 74, 100, 0], [180, 32, 48, 19]]
+
+>>> matrix_divided(matrix1, 4)
+[[3.5, 18.5, 25.0, 0.0], [45.0, 8.0, 12.0, 4.75]]
+
+]normal test case(ins, 4.56)
+>>> matrix1 = [[14, 74, 100, 0], [180, 32, 48, 19]]
+
+>>> matrix_divided(matrix1, 4.56)
+[[3.07, 16.23, 21.93, 0.0], [39.47, 7.02, 10.53, 4.17]]
+
+]normal test case(ins, 0.5)
+>>> matrix1 = [[14, 74, 100, 0], [180, 32, 48, 19]]
+
+>>> matrix_divided(matrix1, 0.5)
+[[28.0, 148.0, 200.0, 0.0], [360.0, 64.0, 96.0, 38.0]]
+
+]upnormal test case(non_ints, 4)
+>>> matrix2 = [[3, 4, 5, "a"], [1, 4, "d", 5]]
+
+>>> matrix_divided(matrix2, 4) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+]upnormal test case(int_with_diff_sizes, 4)
+>>> matrix2 = [[3, 4, 5, 6], [1, 4, 45, 5, 53]]
+
+>>> matrix_divided(matrix2, 4) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+]upnormal test case(non_ints_and_diff_size, 4)
+>>> matrix2 = [["pi = 3.14", 4, "5.453W", 6], [1.001, "ad", 45, "43", 53.42]]
+
+>>> matrix_divided(matrix2, 4) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+]upnormal test case(ints, "a")
+>>> matrix2 = [[3.10, 4.123, 5.5, 6], [1, 4.53, 45, 5]]
+
+>>> matrix_divided(matrix2, "a") #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+]upnormal test case(ints, 0)
+>>> matrix2 = [[3.10, 4.123, 5.5, 6], [1, 4.53, 45, 5]]
+
+>>> matrix_divided(matrix2, 0) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero

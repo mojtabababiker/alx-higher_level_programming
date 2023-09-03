@@ -1,0 +1,33 @@
+"""
+=============================
+ This is a test suit for the
+    0-add_integer.py task
+=============================
+
+>>> from add_integer import add_integer
+
+    /add_integer takes two integers or flaot(casted to int)
+         and return the sum of those two number/
+
+]normal test case(two ints)
+>>> add_integer(232, -2)
+230
+
+]normal test case(int and float)
+>>> add_integer(20, 55.49)
+75
+
+]ubnormal test case(int, str)
+>>> add_integer(20, 'five') #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+]ubnormal test case(tuple, int)
+>>> add_integer((2, 3), 20) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+"""

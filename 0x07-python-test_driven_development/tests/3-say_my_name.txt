@@ -1,0 +1,32 @@
+"""
+=============================
+ This is a test suit for the
+   3-say_my_name.py task
+=============================
+
+>>> from say_my_name import say_my_name
+
+    /say_my_name takes two strings first name and last name, and
+    	    prints `My name is <first_name> <last_name>`/
+
+]normal test case(str, str)
+>>> say_my_name("my", "name")
+My name is my name
+
+]normal test case(str, str)
+>>> say_my_name("")
+My name is  
+
+]ubnormal test case(str, list)
+>>> say_my_name("Moj", [x for x in "Mohammed"]) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+]ubnormal test case(list, str)
+>>> say_my_name([x for x in "Mohammed"]) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+"""

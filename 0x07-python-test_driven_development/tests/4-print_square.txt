@@ -1,0 +1,33 @@
+"""
+==============================
+ This is a test suit for the
+  4-print_square.py  task
+==============================
+
+>>> from print_square import print_square
+
+    /print_square takes a `size` of the square and
+           prints it with the `#` samples/
+]normal test case(int)
+>>> print_square(3)
+###
+###
+###
+
+]normal test case(0)
+>>> print_square(0)
+<BLANKLINE>
+
+]upnormal test case(-int)
+>>> print_square(-1) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+]upnormal test case(float)
+>>> print_square(2.5) # doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+"""
