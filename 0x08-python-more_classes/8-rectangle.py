@@ -28,6 +28,7 @@ class Rectangle:
 
         self.__width = width
         self.__height = height
+        self.print_symbol = Rectangle.print_symbol
         Rectangle.number_of_instances += 1
 
     @property
@@ -50,7 +51,7 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(self,height):
+    def height(self, height):
         """
         decorated function to set self.__height attribute
         """
@@ -65,15 +66,14 @@ class Rectangle:
         Implementing custom __str__ method for the Rectangle object
         """
         __rectanglestr = ""
-        __print_symbol = Rectangle.print_symbol
-        if not isinstance(Rectangle.print_symbol, str):
-            __print_symbol = str(Rectangle.print_symbol)
         if self.__width == 0:
             return ""
+
         for i in range(self.__height):
             for _ in range(self.__width):
-                __rectanglestr += __print_symbol
-            __rectanglestr += '\n'
+                __rectanglestr += str(self.print_symbol)
+            if i != self.__height - 1:
+                __rectanglestr += '\n'
         return __rectanglestr
 
     def __repr__(self):
@@ -87,7 +87,6 @@ class Rectangle:
         Implementing custom delettion __del__ method for the
         Rectangle object
         """
-
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
@@ -96,7 +95,6 @@ class Rectangle:
         Rectangle.area(self)
         Instance method which calculates the area of the rectangle
         """
-
         return self.__width * self.__height
 
     def perimeter(self):
@@ -105,7 +103,6 @@ class Rectangle:
         Instance method which calculates the perimeter of the
         recnatgle
         """
-
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
