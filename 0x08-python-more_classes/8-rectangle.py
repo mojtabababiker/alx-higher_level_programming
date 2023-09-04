@@ -28,14 +28,14 @@ class Rectangle:
 
         self.__width = width
         self.__height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
         return self.__width
 
     @width.setter
-    def width(self, value):
+    def width(self, width):
         """
         decorated function to set self.__width attribute
         """
@@ -50,7 +50,7 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(self, value):
+    def height(self,height):
         """
         decorated function to set self.__height attribute
         """
@@ -65,9 +65,9 @@ class Rectangle:
         Implementing custom __str__ method for the Rectangle object
         """
         __rectanglestr = ""
-        __print_symbol = print_symbol
-        if not isinstance(print_symbol, str):
-            __print_symbol = str(print_symbol)
+        __print_symbol = Rectangle.print_symbol
+        if not isinstance(Rectangle.print_symbol, str):
+            __print_symbol = str(Rectangle.print_symbol)
         if self.__width == 0:
             return ""
         for i in range(self.__height):
@@ -89,7 +89,7 @@ class Rectangle:
         """
 
         print("Bye rectangle...")
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
 
     def area(self):
         """

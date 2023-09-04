@@ -31,7 +31,7 @@ class Rectangle:
         return self.__width
 
     @width.setter
-    def width(self, value):
+    def width(self, width):
         """
         decorated function to set self.__width attribute
         """
@@ -46,7 +46,7 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(self, value):
+    def height(self, height):
         """
         decorated function to set self.__height attribute
         """

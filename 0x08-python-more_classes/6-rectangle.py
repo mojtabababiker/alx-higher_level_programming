@@ -27,14 +27,14 @@ class Rectangle:
 
         self.__width = width
         self.__height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
         return self.__width
 
     @width.setter
-    def width(self, value):
+    def width(self, width):
         """
         decorated function to set self.__width attribute
         """
@@ -49,7 +49,7 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(self, value):
+    def height(self, height):
         """
         decorated function to set self.__height attribute
         """
@@ -84,7 +84,7 @@ class Rectangle:
         Rectangle object
         """
         print("Bye rectangle...")
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
 
     def area(self):
         """
