@@ -29,4 +29,9 @@ Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
 
+>>> say_my_name() #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+...
+TypeError:
+
 """
