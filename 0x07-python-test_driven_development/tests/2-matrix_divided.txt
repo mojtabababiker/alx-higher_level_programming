@@ -4,7 +4,7 @@
   2-matrix_divided.py  task
 =============================
 
->>> from matrix_divided import matrix_divided
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
 
     /matrix_divided takes a list of lists that have the same length
          divides each elements on this list by the div arg/
@@ -66,3 +66,10 @@ TypeError: div must be a number
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
+
+>>> matrix1 = [[1, 10 ** 20], [20 ** 100, 3]]
+>>> matrix_divided(matrix1, 10**(-289)) #doctest: +ELLIPSIS
+...
+...
+
+"""
