@@ -17,17 +17,28 @@
 >>> add_integer(20, 55.49)
 75
 
-]ubnormal test case(int, str)
+]upnormal test case(int, str)
 >>> add_integer(20, 'five') #doctest: +ELLIPSIS
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
 
-]ubnormal test case(tuple, int)
+]upnormal test case(tuple, int)
 >>> add_integer((2, 3), 20) #doctest: +ELLIPSIS
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
+]upnormal case
+>>> add_integer(float('NaN')) #doctest: +ELLIPSIS
+...
+
+>>> add_integer(float("inf")) #doctest: +ELLIPSIS
+...
+
+>>> add_integer(-float("inf"), -1000) #dectest: +ELLIPSIS
+...
+
 
 
 """
