@@ -6,6 +6,11 @@ print_square(size)
 
 
 def print_square(size):
+    """
+    print_square(size)
+    print a square using the `#` symbol
+    with the `size` size
+    """
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
     if size < 0:
@@ -14,5 +19,5 @@ def print_square(size):
         for j in range(size):
             print("#", end='')
         if i != size - 1:
-            print("")
-    print("")
+            print()
+    print()
