@@ -4,7 +4,7 @@
    3-say_my_name.py task
 =============================
 
->>> from say_my_name import say_my_name
+>>> say_my_name = __import__("3-say_my_name").say_my_name
 
     /say_my_name takes two strings first name and last name, and
     	    prints `My name is <first_name> <last_name>`/
