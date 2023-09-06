@@ -4,7 +4,7 @@
     0-add_integer.py task
 =============================
 
->>> from add_integer import add_integer
+>>> add_integer = __import__("0-add_integer").add_integer
 
     /add_integer takes two integers or flaot(casted to int)
          and return the sum of those two number/
