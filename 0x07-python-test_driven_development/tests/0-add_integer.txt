@@ -30,15 +30,32 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 ]upnormal case
->>> add_integer(float('NaN')) #doctest: +ELLIPSIS
+>>> add_integer(float('NaN')) #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
 ...
-
->>> add_integer(float("inf")) #doctest: +ELLIPSIS
+TypeError:
+>>> add_integer(float("inf")) #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
 ...
-
->>> add_integer(-float("inf"), -1000) #dectest: +ELLIPSIS
+TypeError:
+>>> add_integer(4, float('NaN')) #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
 ...
+TypeError:
+>>> add_integer(4, float("inf")) #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+...
+TypeError:
 
+>>> add_integer(-float("inf"), -10) #dectest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+...
+TypeError:
+
+>>> add_integer(-10, -float("inf")) #dectest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+...
+TypeError:
 
 
 """
