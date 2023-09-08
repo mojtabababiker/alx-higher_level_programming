@@ -33,29 +33,29 @@ TypeError: a must be an integer
 >>> add_integer(float('NaN')) #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
 Traceback (most recent call last):
 ...
-TypeError:
+ValueError:
 >>> add_integer(float("inf")) #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
 Traceback (most recent call last):
 ...
-TypeError:
+OverflowError:
 >>> add_integer(4, float('NaN')) #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
 Traceback (most recent call last):
 ...
-TypeError:
+ValueError:
 >>> add_integer(4, float("inf")) #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
 Traceback (most recent call last):
 ...
-TypeError:
+OverflowError:
 
 >>> add_integer(-float("inf"), -10) #dectest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
 Traceback (most recent call last):
 ...
-TypeError:
+OverflowError: cannot convert float infinity to integer
 
 >>> add_integer(-10, -float("inf")) #dectest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
 Traceback (most recent call last):
 ...
-TypeError:
+OverflowError: cannot convert float infinity to integer
 
 
 """
