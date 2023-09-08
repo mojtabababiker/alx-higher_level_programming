@@ -16,7 +16,7 @@
 
 ]normal test case(0)
 >>> print_square(0)
-<BLANKLINE>
+
 
 ]upnormal test case(-int)
 >>> print_square(-1) # doctest: +ELLIPSIS
