@@ -31,7 +31,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertIsNone(max_integer())
         self.assertEqual(max_integer([25]), 25)
         self.assertEqual(max_integer([2, 2, 2, 2, 2]), 2)
-        self.assertEqual(max_integer([19, 12, 4, 2, 18], 19)
+        self.assertEqual(max_integer([19, 12, 4, 2, 18]), 19)
 
     def test_not_valide_cases(self):
         '''
