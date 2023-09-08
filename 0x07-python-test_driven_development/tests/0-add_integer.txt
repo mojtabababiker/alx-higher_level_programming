@@ -57,5 +57,12 @@ Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
 
+>>> add_integer(10)
+108
+
+>>> add_integer() #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+...
+TypeError:
 
 """
