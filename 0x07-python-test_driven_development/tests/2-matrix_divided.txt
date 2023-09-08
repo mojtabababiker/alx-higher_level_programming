@@ -67,9 +67,28 @@ Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
 
->>> matrix1 = [[1, 10 ** 20], [20 ** 100, 3]]
->>> matrix_divided(matrix1, 10**(-289)) #doctest: +ELLIPSIS
+
+>>> matrix_divided(2) #dectest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
 ...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided() #dectest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
 ...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+>>> matrix_divided([[2, 4], [1, float('NAN')]], 2) #dectest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+[[1.0, 2.0], [0.5, nan]]
+
+>>> matrix_divided([[2, 4], [1, float('inf')]], 2) #dectest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+[[1.0, 2.0], [0.5, inf]]
+
+>>> matrix_divided([[0.0, 0.0], [0.0, 0.0]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
+
+>>> matrix_divided([[0.0, 0.0], [0.0, 0.0]], float('NAN')) #dectest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+[[nan, nan], [nan, nan]]
+
 
 """
