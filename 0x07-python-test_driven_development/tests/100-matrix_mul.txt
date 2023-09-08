@@ -94,3 +94,17 @@ ValueError: m_a and m_b can't be multiplied
 >>> m2 = [[7, 8], [9, 10], [11, 12]]
 >>> matrix_mul(m1, m2)
 [[58, 64], [139, 154]]
+
+===================================================
+]case 7
+>>> matrix_mul(m1)
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+===================================================
+]case 7
+>>> matrix_mul()
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
