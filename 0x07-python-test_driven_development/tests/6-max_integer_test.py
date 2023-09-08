@@ -26,10 +26,12 @@ class TestMaxInteger(unittest.TestCase):
            1. Empty list
            2. List with one Element
            3. List with equal items
+           3. List with max at begining
         '''
         self.assertIsNone(max_integer())
         self.assertEqual(max_integer([25]), 25)
         self.assertEqual(max_integer([2, 2, 2, 2, 2]), 2)
+        self.assertEqual(max_integer([19, 12, 4, 2, 18], 12)
 
     def test_not_valide_cases(self):
         '''
