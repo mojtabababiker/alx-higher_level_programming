@@ -14,4 +14,4 @@ def lookup(obj):
         Get an obkect as arguments and return a list of all its attributes
         and methods.
     """
-    dir(obj)
+    return dir(obj)
