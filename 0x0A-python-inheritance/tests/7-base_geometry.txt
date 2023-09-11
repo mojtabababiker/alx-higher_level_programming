@@ -41,6 +41,11 @@ Traceback (most recent call last):
 ...
 TypeError: val1 must be an integer
 
+>>> basegeo.integer_validator("val1", -float("inf")) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: val1 must be an integer
+
 >>> basegeo.integer_validator("val1", "info") #doctest: +ELLIPSIS
 Traceback (most recent call last):
 ...
@@ -52,6 +57,16 @@ Traceback (most recent call last):
 TypeError: val1 must be an integer
 
 >>> basegeo.integer_validator("val1", True) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: val1 must be an integer
+
+>>> basegeo.integer_validator("val1", False) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: val1 must be an integer
+
+>>> basegeo.integer_validator("val1", None) #doctest: +ELLIPSIS
 Traceback (most recent call last):
 ...
 TypeError: val1 must be an integer
