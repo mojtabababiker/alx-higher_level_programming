@@ -51,7 +51,7 @@ Traceback (most recent call last):
 ...
 TypeError:
 
->>> mylist = MyList(1, 2, 4) #doctest: +ELLIPSIS +IGNORE+EXCEPTION_DETAIL
+>>> mylist = MyList(1, 2, 4) #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
 Traceback (most recent call last):
 ...
 TypeError:
