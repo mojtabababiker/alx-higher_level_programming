@@ -60,4 +60,10 @@ TypeError:
 >>> mylist.print_sorted()
 []
 
+>>> mylist = MyList((2, 4, 1, 1, -1))
+>>> mylist.print_sorted(12) #doctest: +IGNORE_EXCEPTION_DETAIL +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError:
+
 """
