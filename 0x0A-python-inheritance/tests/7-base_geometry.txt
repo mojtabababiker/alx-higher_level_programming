@@ -1,0 +1,38 @@
+"""
+This is doctest file for 7-base_geometry.py
+
+>>> BaseGeo = __import__("7-base_geometry").BaseGeometry
+
+] normal case
+>>> basegeo = BaseGeo()
+
+] normal case(test area method)
+>>> basegeo.area() #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+
+]normal case (test intege_validator() method)
+>>> basegeo.integer_validator("val1", 13)
+
+] upnormal case (test intege_validator() method)
+>>> basegeo.integer_validator("val1", -13) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+ValueError: val1 must be greater than 0
+
+>>> basegeo.integer_validator("val1", "-13") #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: val1 must be an integer
+
+>>> basegeo.integer_validator("val1") #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+...
+TypeError:
+
+>>> basegeo.integer_validator() #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+...
+TypeError:
