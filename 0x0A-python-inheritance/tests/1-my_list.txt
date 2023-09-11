@@ -66,4 +66,10 @@ Traceback (most recent call last):
 ...
 TypeError:
 
+>>> mylist = MyList((True, [1, 2, 3], 1.53, 1, "a"))
+>>> mylist.print_sorted() #doctest: +IGNORE_EXCEPTION_DETAIL +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError:
+
 """
