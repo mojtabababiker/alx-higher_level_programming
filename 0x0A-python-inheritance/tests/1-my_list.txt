@@ -1,0 +1,52 @@
+"""
+ This is doctest file for 1-my_list.py module
+
+>>> MyList = __import__("1-my_list").MyList
+
+    / MyList is a Class which inherit from the built in class List
+           which provides a method of sorted printing for
+	   	            its elements/
+] normal case
+>>> mylist = MyList()
+
+] normal case (appned and print slices)
+>>> mylist.append(31)
+>>> mylist.append(1)
+>>> mylist.append(10)
+>>> mylist.append(21)
+>>> mylist.append(11)
+
+>>> mylist[:]
+[31, 1, 10, 21, 11]
+
+>>> mylist[:3]
+[31, 1, 10]
+
+>>> mylist[-1]
+11
+>>> print(mylist)
+[31, 1, 10, 21, 11]
+
+>>> mylist.print_sorted()
+[1, 10, 11, 21, 31]
+
+>>> mylist
+[31, 1, 10, 21, 11]
+
+] normal case (providing etteratable as arg)
+>>> mylist = MyList((2, -1, 31, 4))
+
+>>> mylist
+[2, -1, 31, 4]
+
+] normal case using List.pop() method
+>>> mylist.pop()
+4
+>>> mylist
+[2, -1, 31]
+
+] upnormal case (providing non etterable as arg)
+>>> mylist = MyList(1) #doctest: +ELLIPSIS +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+...
+TypeError:
