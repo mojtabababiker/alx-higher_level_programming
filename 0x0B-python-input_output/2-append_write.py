@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Contains the append_file(filename="", text="") function
+Contains the append_write(filename="", text="") function
 """
 
 
-def append_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
     Syntax:
-        append_file(filename="", text="")
+        append_write(filename="", text="")
 
     Description:
         Write the `text` string to the the text file `filename`
