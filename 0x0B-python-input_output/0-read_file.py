@@ -16,9 +16,3 @@ def read_file(filename=""):
 
     with open(filename, 'r', encoding='utf-8') as fh:
         print(fh.read(), end="")
-
-
-if __name__ == "__main__":
-    read_file("README.md")
-    #read_file("")
-    #read_file("README.MD")
