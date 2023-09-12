@@ -30,4 +30,4 @@ class Student:
         Return a json representation of the Student instance
         """
 
-        return self.__dic__
+        return self.__dict__
