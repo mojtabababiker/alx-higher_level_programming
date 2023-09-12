@@ -15,4 +15,5 @@ def write_file(filename="", text=""):
     """
 
     with open(filename, "w", encoding="utf-8") as fh:
-        fh.write(text)
+        chars_num = fh.write(text)
+    return chars_num
