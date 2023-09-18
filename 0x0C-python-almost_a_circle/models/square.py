@@ -48,8 +48,9 @@ class Square(Rectangle):
         set the self.__width and self.__height to the value val
         """
         self.validate("width", val)
-        self.__width = val
-        self.__height = val
+        self.width = val
+        self.validate("height", val)
+        self.height = val
 
     def update(self, *args, **kwargs):
         """
