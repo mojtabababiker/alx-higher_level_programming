@@ -36,8 +36,11 @@ class Rectangle(Base):
         """
         implementing of the str method
         """
-        return r"[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y,
-                                                       self.__width, self.__height)
+        return r"[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                        self.__x, self.__y,
+                                                        self.__width,
+                                                        self.__height)
+
     @property
     def width(self):
         """
@@ -152,7 +155,7 @@ class Rectangle(Base):
             print()
             __shape += "\n"
         return __shape
-    
+
     def update(self, *args, **kwargs):
         """
         Syntax:
@@ -163,7 +166,6 @@ class Rectangle(Base):
             list starting by the `id`, `width`, `height`, `x`, and `y`, or
             by using the **kwargs
         """
-
 
         if len(args) >= 1:
             super().__init__(args[0])
@@ -213,10 +215,3 @@ class Rectangle(Base):
         __dic['y'] = self.y
         __dic['id'] = self.id
         return __dic
-
-
-
-if __name__ == "__main__":
-    r = Rectangle(3, 4, 2, 1, 0)
-    print(r)
-    r.display()

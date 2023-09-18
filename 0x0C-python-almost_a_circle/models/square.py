@@ -99,7 +99,6 @@ class Square(Rectangle):
 
         __dic = dict()
         __dic['size'] = self.size
-        #__dic['height'] = self.height
         __dic['x'] = self.x
         __dic['y'] = self.y
         __dic['id'] = self.id

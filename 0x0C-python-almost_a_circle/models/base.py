@@ -5,7 +5,6 @@ for most of the classes in this projects
 """
 
 
-
 class Base:
     """
     Syntax:
@@ -60,9 +59,9 @@ class Base:
                 list_dics.append(cls.to_dictionary(obj))
         json_list_dics = to_json_string(list_dics)
         filename = "{}.json".format(cls.__name__)
-        with open(filename, "w", encoding="utf-8")  as f:
+        with open(filename, "w", encoding="utf-8") as f:
             f.write(json_list_dics)
-        
+
     @staticmethod
     def from_json_string(json_string):
         """
@@ -114,21 +113,3 @@ class Base:
             return instances_list
         except FileNotFoundError as e:
             return []
-        
-
-"""if __name__ == "__main__":
-
-    b1 = Base()
-    print("b1.id={}".format(b1.id))
-
-    b2 = Base()
-    print("b2.id={}".format(b2.id))
-
-    b3 = Base()
-    print("b3.id={}".format(b3.id))
-
-    b4 = Base(12)
-    print(b4.id)
-
-    b5 = Base()
-    print(b5.id)"""
