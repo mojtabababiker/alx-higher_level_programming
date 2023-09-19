@@ -90,6 +90,7 @@ class Base:
         """
 
         __dumyInstance = cls(1, 1)
+        Base.__nb_objects -= 1
         __dumyInstance.update(**dic)
         return __dumyInstance
 
