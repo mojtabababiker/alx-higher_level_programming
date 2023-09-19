@@ -3,6 +3,7 @@
 base.py modules contains the class Base, which is the base class
 for most of the classes in this projects
 """
+import json
 
 
 class Base:
@@ -40,7 +41,7 @@ class Base:
         """
 
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
