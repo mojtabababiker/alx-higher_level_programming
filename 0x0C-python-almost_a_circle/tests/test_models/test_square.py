@@ -143,13 +143,14 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(__square.x, 0)
         self.assertEqual(__square.y, 0)
         # self.assertEqual(__square.id, 6)
-        print(__square)
 
     def test_load_from_file_method(self):
         """
         Test Base.load_from_file_method(cls) on the Square class
         """
 
+        __dic = {"size":2}
+        __square = Square.create(**__dic)
         __inst = Square.load_from_file()[0]
         self.assertEqual(__inst.size, 2)
         self.assertEqual(__inst.x, 3)

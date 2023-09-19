@@ -177,6 +177,8 @@ class TestRectangle(unittest.TestCase):
         Test Base.load_from_file_method(cls) on the Rectangle class
         """
 
+        rec_1 = Rectangle(1, 2, 3, 4, 5)
+        rec_1.save_to_file([rec_1])
         __inst = Rectangle.load_from_file()[0]
         self.assertEqual(__inst.width, 1)
         self.assertEqual(__inst.height, 2)
