@@ -89,7 +89,10 @@ class Base:
              in the dic
         """
 
-        __dumyInstance = cls(1, 1)
+        if cls.__name__ == "Rectangle":
+            __dumyInstance = cls(1, 1)
+        else:
+            __dumyInstance = cls(1)
         Base.__nb_objects -= 1
         __dumyInstance.update(**dic)
         return __dumyInstance
