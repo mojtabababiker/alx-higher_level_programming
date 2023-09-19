@@ -3,9 +3,21 @@
 Test module using the unittest to test the Rectangle class from the models/rectangle.py
 """
 import unittest
+import os
 
 from models.rectangle import Rectangle
 
+"""
+def tearDownModule():
+   
+    Clean the files created by the test cases if there are
+   
+
+    try:
+        os.remove("Rectangle.json")
+    except FileNotFoundError:
+        pass
+"""
 
 class TestRectangle(unittest.TestCase):
     """
@@ -134,3 +146,41 @@ class TestRectangle(unittest.TestCase):
         rectangle_3 = Rectangle(3, 4, 0, 1, 3)
         dic = {'width': 3, 'height': 4, 'x': 0, 'y': 1, 'id': 3}
         self.assertEqual(rectangle_3.to_dictionary(), dic)
+
+    def test_save_to_file(self):
+        """
+        Test Base.save_to_file method in the rectangle.Rectangle class
+        instance
+        """
+
+        rec_1 = Rectangle(1, 2, 3, 4, 5)
+        rec_1.save_to_file([rec_1])
+
+        with open("Rectangle.json", "r", encoding="utf-8") as f:
+            rec_1_dic = f.read()
+        
+    def test_creat_method(self):
+        """
+        Test the creat method in the rectangle.Rectangle class instance
+        """
+
+        __dic = {"width":3, "height":2, "x":1, "y":1, "id":6}
+        __rec = Rectangle.create(**__dic)
+        self.assertEqual(__rec.width, 3)
+        self.assertEqual(__rec.height, 2)
+        self.assertEqual(__rec.x, 1)
+        self.assertEqual(__rec.y, 1)
+        self.assertEqual(__rec.id, 6)
+
+    def test_load_from_file_method(self):
+        """
+        Test Base.load_from_file_method(cls) on the Rectangle class
+        """
+
+        __inst = Rectangle.load_from_file()[0]
+        self.assertEqual(__inst.width, 1)
+        self.assertEqual(__inst.height, 2)
+        self.assertEqual(__inst.x, 3)
+        self.assertEqual(__inst.y, 4)
+        self.assertEqual(__inst.id, 5)
+        

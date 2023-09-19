@@ -5,6 +5,7 @@ Test the Base class from modules/base.py
 
 
 import unittest
+import json
 from models.base import Base
 
 
@@ -38,4 +39,29 @@ class TestBase(unittest.TestCase):
         self.assertEqual(TestBase.base_1.id, 1)
         self.assertEqual(TestBase.base_2.id, 3)
         self.assertEqual(TestBase.base_3.id, 2)
-        
+
+    def test_to_json_string_method(self):
+        """
+        Test the Base function to_json_string directly without inheritance from
+        its subclasses
+        """
+
+        dics_list = [{'x': 2, 'y': 4, 'id': None, 'heihgt': 3, 'width': float('inf')},
+                     {'x': 1, 'y': 3, 'id': None, 'heihgt': 10, 'width': -float('inf')}]
+
+        json_dics_list = json.dumps(dics_list)
+        self.assertEqual(TestBase.base_1.to_json_string(dics_list), json_dics_list)
+        self.assertEqual(TestBase.base_1.to_json_string([]), str([]))
+
+    def test_from_json_string_method(self):
+        """
+        Test the Base from_json_string method directly without inheritance from its
+        sibclasses
+        """
+
+        dics_list = [{'x': 2, 'y': 4, 'id': None, 'heihgt': 3, 'width': float('inf')},
+                     {'x': 1, 'y': 3, 'id': None, 'heihgt': 10, 'width': -float('inf')}]
+        json_dics_list = json.dumps(dics_list)
+        self.assertEqual(TestBase.base_1.from_json_string(json_dics_list), dics_list)
+        self.assertEqual(TestBase.base_1.from_json_string(None), [])
+        self.assertEqual(TestBase.base_1.from_json_string(""), [])
