@@ -23,7 +23,7 @@ class Square(Rectangle):
         x, y, and id, the initiate is done by the super class Rectangle
         """
 
-        super().__init__(width=size, height=size, x=x, y=y, id=id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """
@@ -65,29 +65,30 @@ class Square(Rectangle):
 
         if len(args) >= 1:
 
-            super().__init__(args[0])
+            # super().__init__(args[0])
+            super().update(args[0])
             for i in range(1, len(args)):
                 if i == 1:
                     self.size = args[i]
                 elif i == 2:
                     self.validate("x", args[i])
-                    self.__x = args[i]
+                    self.x = args[i]
                 elif i == 3:
                     self.validate("y", args[i])
-                    self.__y = args[i]
+                    self.y = args[i]
         else:
 
             for key, val in kwargs.items():
                 if key == "id":
-                    super().__init__(val)
+                    super().update(val)
                 elif key == "size":
                     self.size = val
                 elif key == "x":
                     self.validate(key, val)
-                    self.__x = val
+                    self.x = val
                 elif key == "y":
                     self.validate(key, val)
-                    self.__y = val
+                    self.y = val
 
     def to_dictionary(self):
         """
