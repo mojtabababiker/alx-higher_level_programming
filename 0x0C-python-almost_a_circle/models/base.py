@@ -114,7 +114,7 @@ class Base:
                 json_dics_list = f.read()
                 dics_list = Base.from_json_string(json_dics_list)
                 for dic in dics_list:
-                    instances_list.appen(cls.creat(dic))
+                    instances_list.append(cls.create(**dic))
             return instances_list
         except FileNotFoundError as e:
             return []
