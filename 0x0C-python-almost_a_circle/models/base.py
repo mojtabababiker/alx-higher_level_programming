@@ -89,7 +89,7 @@ class Base:
              in the dic
         """
 
-        __dumyInstance = cls(1, 1, 1, id=1)
+        __dumyInstance = cls(1, 1)
         __dumyInstance.update(**dic)
         return __dumyInstance
 
