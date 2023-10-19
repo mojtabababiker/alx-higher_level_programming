@@ -9,4 +9,4 @@ SELECT id, `name` FROM cities
        	     SELECT id FROM states
 	     	    WHERE `name` = "California"
 		    )
-       ORDER BY id ASC; -- and then they get sorted by the city id
+       ORDER BY cities.id ASC; -- and then they get sorted by the city id
