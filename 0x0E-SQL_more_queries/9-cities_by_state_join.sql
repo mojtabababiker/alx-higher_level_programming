@@ -2,6 +2,6 @@
 
 SELECT cities.id, cities.name, states.name
        FROM citeis
-       INNER JOIN states
+       FULL JOIN states
        ON citeis.state_id = states.id
        ORDER BY cities.id ASC;
