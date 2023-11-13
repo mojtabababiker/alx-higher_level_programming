@@ -2,6 +2,7 @@
 
 const args = process.argv;
 
-if (args.length > 2) {
-    console.log(args[2]);
-}
+const msg = args[i];
+
+msg ??= 'No Argument';
+console.log(msg);
