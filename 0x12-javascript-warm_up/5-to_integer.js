@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
 const args = process.argv;
+const myNumber = Number(args[2]);
 let msg = 'Not a number';
-let myNumber = Number(args[2]);
 
-msg = myNumber ? 'My number: ' + myNumber : msg
+msg = myNumber ? 'My number: ' + myNumber : msg;
 console.log(msg);
