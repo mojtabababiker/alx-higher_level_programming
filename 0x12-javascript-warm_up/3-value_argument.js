@@ -2,7 +2,6 @@
 
 const args = process.argv;
 
-const msg = args[i];
+const msg = args[2] || 'No Argument';;
 
-msg ??= 'No Argument';
 console.log(msg);
