@@ -7,6 +7,7 @@ import requests
 if __name__ == "__main__":
     try:
         res = requests.get(sys.argv[1])
+        res.raise_for_status()
         print(res.text)
     except requests.exceptions.HTTPError:
         print("Error code: {}".format(res.status_code))
