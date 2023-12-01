@@ -13,6 +13,7 @@ if __name__ == "__main__":
         res = requests.get(url, headers=headers,
                            auth=(sys.argv[1],
                                  sys.argv[2]))
+        res.raise_for_status()
 
         print(res.json()["id"])
 
