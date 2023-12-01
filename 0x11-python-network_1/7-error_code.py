@@ -4,8 +4,9 @@ package and handle errors """
 import sys
 import requests
 
-try:
-    res = requests.get(sys.argv[1])
-    print(res.text)
-except requests.exceptions.HTTPError:
-    print("Error code: {}".format(res.status_code))
+if __name__ == "__main__":
+    try:
+        res = requests.get(sys.argv[1])
+        print(res.text)
+    except requests.exceptions.HTTPError:
+        print("Error code: {}".format(res.status_code))
