@@ -16,7 +16,7 @@ if __name__ == "__main__":
                            )
         res.raise_for_status()
 
-        print(res.json())
+        print(res.json()["id"])
 
     except (requests.exceptions.HTTPError, KeyError):
         print("None")
