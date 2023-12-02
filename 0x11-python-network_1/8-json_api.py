@@ -14,8 +14,8 @@ if __name__ == "__main__":
         json_format = res.json()
         print(f"[{json_format['id']}] {json_format['name']}")
 
-    except requests.exceptions.HTTPError:
-        print("Not a valid JSON")
-
     except KeyError:
         print("No result")
+
+    except Exception:
+        print("Not a valid JSON")
