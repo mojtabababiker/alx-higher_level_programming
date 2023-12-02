@@ -4,7 +4,7 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    url = "https://api.github.com/users/{}".format(sys.argv[1])
+    url = "https://api.github.com/user"
     headers = {"Accept": "application/vnd.github+json",
                "X-GitHub-Api-Version": "2022-11-28",
                }
@@ -12,10 +12,11 @@ if __name__ == "__main__":
     try:
         res = requests.get(url, headers=headers,
                            auth=(sys.argv[1],
-                                 sys.argv[2]))
+                                 sys.argv[2]),
+                           )
         res.raise_for_status()
 
-        print(res.json()["id"])
+        print(res.json())
 
     except (requests.exceptions.HTTPError, KeyError):
         print("None")
