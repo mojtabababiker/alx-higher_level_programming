@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /* Script that reads and print file contents using the fs/promises module */
-const { readFile } = require('node:fs/promises');
+const { readFile } = require('fs/promises');
 
 async function readContents () {
   try {
