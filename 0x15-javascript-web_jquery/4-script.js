@@ -1,10 +1,10 @@
 const header = $("header");
 $("div#toggle_header").on ("click", function () {
-  if (header.hasclass("red")) {
-    header.removeclass("red");
-    header.addclass("green");
+  if (header.hasClass("red")) {
+    header.removeClass("red");
+    header.addClass("green");
   } else {
-    header.removeclass("green");
-    header.addclass("red");
+    header.removeClass("green");
+    header.addClass("red");
   }
 });
